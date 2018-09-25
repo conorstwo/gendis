@@ -18,6 +18,30 @@ public class IntegerToStringConverterTest {
     }
 
     @Test
+    public void testMultipleOf3ReturnsFizz() {
+        IntegerToStringConverter integerToStringConverter = new IntegerToStringConverter();
+        Integer inputInteger = 3;
+        String convertedString = integerToStringConverter.convert(inputInteger);
+        assertEquals(convertedString, "Fizz");
+    }
+
+    @Test
+    public void testMultipleOf5ReturnsBuzz() {
+        IntegerToStringConverter integerToStringConverter = new IntegerToStringConverter();
+        Integer inputInteger = 5;
+        String convertedString = integerToStringConverter.convert(inputInteger);
+        assertEquals(convertedString, "Buzz");
+    }
+
+    @Test
+    public void testMultipleOf5And5ReturnsFizzBuzz() {
+        IntegerToStringConverter integerToStringConverter = new IntegerToStringConverter();
+        Integer inputInteger = 15;
+        String convertedString = integerToStringConverter.convert(inputInteger);
+        assertEquals(convertedString, "FizzBuzz");
+    }
+
+    @Test
     public void testNegativeIntegerConvertsToString() {
         IntegerToStringConverter integerToStringConverter = new IntegerToStringConverter();
         Integer inputInteger = -14;
